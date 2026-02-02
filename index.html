@@ -1,18 +1,21 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <script type="text/javascript">
-    (function(c,l,a,r,i,t,y){
-        c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
-        t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
-        y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
-    })(window, document, "clarity", "script", "v80r2kraiw");
-</script>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=AW-17925586657"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'AW-17925586657');
+    </script>
+
+    <!-- Novo Script de Rastreamento (Raads) -->
+    <script src="https://api.raads.com.br/code/8300-faa4f698-cefa-4a7c-bd8d-f475d030825c"></script>
+
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
-    <!-- External Script -->
-    <script src="https://api.stuart-little.com/code/8300-c5a205c1-143b-4811-8c2c-b3cb04ac3145"></script>
     
     <!-- SEO & Meta Tags -->
     <title>TestoLink - Premium Men's Performance Formula (Europe)</title>
@@ -20,9 +23,13 @@
     <meta name="keywords" content="testolink, men's health, testosterone support, male vitality, energy supplement, TestoLink Europe, Sweden, Denmark, Finland, Germany, UK">
     <meta name="author" content="TestoLink EU">
     <meta name="robots" content="index, follow">
+    
+    <!-- Canonical Link -->
+    <link rel="canonical" href="https://get-testolink.vercel.app/">
 
     <!-- Open Graph / Facebook / WhatsApp -->
     <meta property="og:type" content="website">
+    <meta property="og:url" content="https://get-testolink.vercel.app/">
     <meta property="og:title" content="TestoLink - Men's Performance Formula">
     <meta property="og:description" content="Unlock your potential with TestoLink. The daily formula for energy, strength, and drive. Available now in Europe.">
     <meta property="og:image" content="https://i.imgur.com/7hKBvwf.png">
@@ -102,6 +109,15 @@
         ::-webkit-scrollbar { width: 8px; }
         ::-webkit-scrollbar-track { background: #f1f1f1; }
         ::-webkit-scrollbar-thumb { background: #0B1E3D; border-radius: 10px; }
+
+        /* Popup Animation */
+        .purchase-popup {
+            animation: slideUp 0.5s ease-out;
+        }
+        @keyframes slideUp {
+            from { transform: translateY(100%); opacity: 0; }
+            to { transform: translateY(0); opacity: 1; }
+        }
     </style>
 </head>
 <body class="bg-slate-50 text-brand-navy">
@@ -116,6 +132,23 @@
             <p class="text-slate-600 mb-6" id="modal-text"></p>
             <button onclick="closeModal()" class="w-full py-3 bg-brand-navy text-white font-bold rounded-xl hover:bg-brand-blue transition-colors">
                 OK
+            </button>
+        </div>
+    </div>
+
+    <!-- POPUP DE COMPRA (FULANO COMPROU) -->
+    <div id="purchase-popup" class="fixed bottom-6 left-6 z-[60] hidden">
+        <div class="bg-white rounded-2xl shadow-2xl p-4 flex items-center gap-4 border border-slate-100 max-w-xs purchase-popup">
+            <div class="w-10 h-10 bg-slate-100 rounded-lg flex-shrink-0 flex items-center justify-center">
+                <img src="https://i.imgur.com/7hKBvwf.png" class="h-8 w-auto">
+            </div>
+            <div class="text-xs">
+                <p class="font-bold text-brand-navy"><span id="popup-name">Lars</span> de <span id="popup-city">Stockholm</span></p>
+                <p class="text-slate-500">Acabou de comprar 3 frascos!</p>
+                <p class="text-[9px] text-brand-blue font-bold uppercase mt-0.5">há 2 minutos</p>
+            </div>
+            <button onclick="this.parentElement.parentElement.remove()" class="text-slate-300 hover:text-slate-500 ml-1">
+                <i class="fas fa-times"></i>
             </button>
         </div>
     </div>
@@ -422,6 +455,27 @@
             }
         }
 
+        // Sistema de Prova Social
+        function showRandomPurchase() {
+            const names = ["Lars", "Erik", "Soren", "Hans", "Johan", "Markus", "David"];
+            const cities = ["Stockholm", "Copenhagen", "Berlin", "London", "Amsterdam", "Helsinki"];
+            const popup = document.getElementById('purchase-popup');
+            
+            setInterval(() => {
+                const name = names[Math.floor(Math.random() * names.length)];
+                const city = cities[Math.floor(Math.random() * cities.length)];
+                
+                document.getElementById('popup-name').innerText = name;
+                document.getElementById('popup-city').innerText = city;
+                
+                popup.classList.remove('hidden');
+                
+                setTimeout(() => {
+                    popup.classList.add('hidden');
+                }, 5000);
+            }, 18000); // Mostra a cada 18 segundos
+        }
+
         function scrollToSelection() {
             document.getElementById('country-selection').scrollIntoView({ behavior: 'smooth' });
         }
@@ -445,6 +499,7 @@
             const lang = urlParams.get('lang') || navigator.language.split('-')[0];
             const countryMap = { sv:'se', de:'de', da:'dk', fi:'fi', nl:'nl', en:'gb' };
             setLanguage(lang, countryMap[lang] || 'gb');
+            showRandomPurchase();
         };
 
         function showPolicy(type) {
