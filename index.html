@@ -19,8 +19,8 @@
     
     <!-- SEO & Meta Tags -->
     <title>TestoLink - Premium Men's Performance Formula (Europe)</title>
-    <meta name="description" content="Official TestoLink Store. Europe's #1 natural formula for men's energy, vitality, and drive. Fast shipping to Sweden, Denmark, Finland, Germany, Austria, UK, Netherlands & Belgium.">
-    <meta name="keywords" content="testolink, men's health, testosterone support, male vitality, energy supplement, TestoLink Europe, Sweden, Denmark, Finland, Germany, UK">
+    <meta name="description" content="Official TestoLink Store. Europe's #1 natural formula for men's energy, vitality, and drive. Fast shipping to Sweden, Denmark, Finland, Ireland, Spain, Portugal, Italy, France, UK, Netherlands & Belgium.">
+    <meta name="keywords" content="testolink, men's health, testosterone support, male vitality, energy supplement, TestoLink Europe, Sweden, Denmark, Finland, Ireland, Spain, Portugal, Italy, France, UK">
     <meta name="author" content="TestoLink EU">
     <meta name="robots" content="index, follow">
     
@@ -105,12 +105,12 @@
             box-shadow: 0 10px 15px -3px rgba(11, 30, 61, 0.3);
         }
 
-        /* Custom Scrollbar */
+        /* Barra de deslocamento personalizada */
         ::-webkit-scrollbar { width: 8px; }
         ::-webkit-scrollbar-track { background: #f1f1f1; }
         ::-webkit-scrollbar-thumb { background: #0B1E3D; border-radius: 10px; }
 
-        /* Popup Animation */
+        /* Animação do Popup */
         .purchase-popup {
             animation: slideUp 0.5s ease-out;
         }
@@ -144,8 +144,8 @@
             </div>
             <div class="text-xs">
                 <p class="font-bold text-brand-navy"><span id="popup-name">Lars</span> de <span id="popup-city">Stockholm</span></p>
-                <p class="text-slate-500">Acabou de comprar 3 frascos!</p>
-                <p class="text-[9px] text-brand-blue font-bold uppercase mt-0.5">há 2 minutos</p>
+                <p class="text-slate-500" data-i18n="popup_bought">Acabou de comprar 3 frascos!</p>
+                <p class="text-[9px] text-brand-blue font-bold uppercase mt-0.5" data-i18n="popup_time">há 2 minutos</p>
             </div>
             <button onclick="this.parentElement.parentElement.remove()" class="text-slate-300 hover:text-slate-500 ml-1">
                 <i class="fas fa-times"></i>
@@ -168,11 +168,15 @@
                     <img src="https://i.imgur.com/vUgjO2Z.png" alt="TestoLink Logo" class="h-8 md:h-10 w-auto cursor-pointer" onclick="window.scrollTo(0,0)">
                 </div>
                 
-                <div class="flex items-center gap-2 md:gap-3">
+                <div class="flex items-center gap-1 md:gap-2 flex-wrap justify-end">
                     <img src="https://flagcdn.com/w40/se.png" onclick="setLanguage('sv', 'se')" class="flag-btn h-4 md:h-5 rounded-sm shadow-sm" title="Sweden">
                     <img src="https://flagcdn.com/w40/dk.png" onclick="setLanguage('da', 'dk')" class="flag-btn h-4 md:h-5 rounded-sm shadow-sm" title="Denmark">
                     <img src="https://flagcdn.com/w40/fi.png" onclick="setLanguage('fi', 'fi')" class="flag-btn h-4 md:h-5 rounded-sm shadow-sm" title="Finland">
-                    <img src="https://flagcdn.com/w40/de.png" onclick="setLanguage('de', 'de')" class="flag-btn h-4 md:h-5 rounded-sm shadow-sm" title="Germany">
+                    <img src="https://flagcdn.com/w40/ie.png" onclick="setLanguage('en', 'ie')" class="flag-btn h-4 md:h-5 rounded-sm shadow-sm" title="Ireland">
+                    <img src="https://flagcdn.com/w40/es.png" onclick="setLanguage('es', 'es')" class="flag-btn h-4 md:h-5 rounded-sm shadow-sm" title="Spain">
+                    <img src="https://flagcdn.com/w40/pt.png" onclick="setLanguage('pt', 'pt')" class="flag-btn h-4 md:h-5 rounded-sm shadow-sm" title="Portugal">
+                    <img src="https://flagcdn.com/w40/it.png" onclick="setLanguage('it', 'it')" class="flag-btn h-4 md:h-5 rounded-sm shadow-sm" title="Italy">
+                    <img src="https://flagcdn.com/w40/fr.png" onclick="setLanguage('fr', 'fr')" class="flag-btn h-4 md:h-5 rounded-sm shadow-sm" title="France">
                     <img src="https://flagcdn.com/w40/gb.png" onclick="setLanguage('en', 'gb')" class="flag-btn h-4 md:h-5 rounded-sm shadow-sm" title="UK">
                     <img src="https://flagcdn.com/w40/nl.png" onclick="setLanguage('nl', 'nl')" class="flag-btn h-4 md:h-5 rounded-sm shadow-sm" title="Netherlands">
                 </div>
@@ -222,20 +226,9 @@
             </div>
         </section>
 
-        <!-- SEÇÃO CTA -->
-        <div class="container mx-auto px-4 py-16 max-w-5xl text-center">
-            <button onclick="scrollToSelection()" class="w-full max-w-2xl py-6 btn-navy text-white font-black text-2xl md:text-3xl rounded-2xl shadow-2xl uppercase tracking-widest mb-6">
-                <span data-i18n="cta_button">GET SPECIAL OFFER + FREE SHIPPING</span>
-            </button>
-            <div class="flex items-center justify-center gap-3 text-slate-500 font-bold">
-                <i class="fas fa-undo-alt text-brand-blue"></i>
-                <span data-i18n="cta_guarantee">Try TestoLink with a 30-Day Money-Back Guarantee.</span>
-            </div>
-        </div>
-
         <!-- SELEÇÃO DE PAÍS -->
         <section id="country-selection" class="bg-white border-y border-slate-200 py-20 md:py-32">
-            <div class="container mx-auto px-4 text-center max-w-5xl">
+            <div class="container mx-auto px-4 text-center max-w-6xl">
                 <h2 class="text-3xl md:text-5xl font-black text-brand-navy mb-6 tracking-tight" data-i18n="select_title">
                     Select Your Region
                 </h2>
@@ -245,7 +238,7 @@
                 
                 <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
                     <!-- Suécia -->
-                    <a href="https://www.fasttrack37.com/PM7HK3TH/2R4CGFZP/?uid=47814" class="flex items-center gap-4 p-5 bg-slate-50 border border-slate-200 rounded-2xl hover:border-brand-blue hover:bg-white hover:shadow-xl transition-all group">
+                    <a href="https://www.fasttrack36.com/PHPWHDRK/2R4CGFZP/?uid=47814" class="flex items-center gap-4 p-5 bg-slate-50 border border-slate-200 rounded-2xl hover:border-brand-blue hover:bg-white hover:shadow-xl transition-all group">
                         <img src="https://flagcdn.com/w80/se.png" class="w-12 h-auto rounded shadow-sm">
                         <div class="text-left">
                             <span class="block font-black text-brand-navy group-hover:text-brand-blue">Sweden</span>
@@ -254,7 +247,7 @@
                     </a>
 
                     <!-- Dinamarca -->
-                    <a href="https://www.fasttrack37.com/PM7HK3TH/2R4G87FX/?uid=47817" class="flex items-center gap-4 p-5 bg-slate-50 border border-slate-200 rounded-2xl hover:border-brand-blue hover:bg-white hover:shadow-xl transition-all group">
+                    <a href="https://www.fasttrack36.com/PHPWHDRK/2R4G87FX/?uid=47817" class="flex items-center gap-4 p-5 bg-slate-50 border border-slate-200 rounded-2xl hover:border-brand-blue hover:bg-white hover:shadow-xl transition-all group">
                         <img src="https://flagcdn.com/w80/dk.png" class="w-12 h-auto rounded shadow-sm">
                         <div class="text-left">
                             <span class="block font-black text-brand-navy group-hover:text-brand-blue">Denmark</span>
@@ -263,7 +256,7 @@
                     </a>
 
                     <!-- Finlândia -->
-                    <a href="https://www.fasttrack37.com/PM7HK3TH/2R4K1ZX5/?uid=47818" class="flex items-center gap-4 p-5 bg-slate-50 border border-slate-200 rounded-2xl hover:border-brand-blue hover:bg-white hover:shadow-xl transition-all group">
+                    <a href="https://www.fasttrack36.com/PHPWHDRK/2R4K1ZX5/?uid=47818" class="flex items-center gap-4 p-5 bg-slate-50 border border-slate-200 rounded-2xl hover:border-brand-blue hover:bg-white hover:shadow-xl transition-all group">
                         <img src="https://flagcdn.com/w80/fi.png" class="w-12 h-auto rounded shadow-sm">
                         <div class="text-left">
                             <span class="block font-black text-brand-navy group-hover:text-brand-blue">Finland</span>
@@ -271,20 +264,53 @@
                         </div>
                     </a>
 
-                    <!-- Alemanha e Áustria -->
-                    <a href="https://www.fasttrack37.com/PM7HK3TH/2R4355K3/?uid=47808" class="flex items-center gap-4 p-5 bg-slate-50 border border-slate-200 rounded-2xl hover:border-brand-blue hover:bg-white hover:shadow-xl transition-all group">
-                        <div class="flex flex-col gap-1">
-                            <img src="https://flagcdn.com/w80/de.png" class="w-10 h-auto rounded shadow-sm">
-                            <img src="https://flagcdn.com/w80/at.png" class="w-10 h-auto rounded shadow-sm">
-                        </div>
+                    <!-- Irlanda -->
+                    <a href="https://www.fasttrack36.com/PHPWHDRK/2R4MRQDC/?uid=47820" class="flex items-center gap-4 p-5 bg-slate-50 border border-slate-200 rounded-2xl hover:border-brand-blue hover:bg-white hover:shadow-xl transition-all group">
+                        <img src="https://flagcdn.com/w80/ie.png" class="w-12 h-auto rounded shadow-sm">
                         <div class="text-left">
-                            <span class="block font-black text-brand-navy group-hover:text-brand-blue">DACH Region</span>
-                            <span class="text-xs text-orange-600 font-bold uppercase tracking-tight" data-i18n="stock_medium">High Demand</span>
+                            <span class="block font-black text-brand-navy group-hover:text-brand-blue">Ireland</span>
+                            <span class="text-xs text-green-600 font-bold uppercase tracking-tight" data-i18n="stock_high">In Stock</span>
+                        </div>
+                    </a>
+
+                    <!-- Espanha -->
+                    <a href="https://www.fasttrack36.com/PHPWHDRK/2R3QRT5F/?uid=47801" class="flex items-center gap-4 p-5 bg-slate-50 border border-slate-200 rounded-2xl hover:border-brand-blue hover:bg-white hover:shadow-xl transition-all group">
+                        <img src="https://flagcdn.com/w80/es.png" class="w-12 h-auto rounded shadow-sm">
+                        <div class="text-left">
+                            <span class="block font-black text-brand-navy group-hover:text-brand-blue">Spain</span>
+                            <span class="text-xs text-orange-600 font-bold uppercase tracking-tight" data-i18n="stock_medium">En Alta Demanda</span>
+                        </div>
+                    </a>
+
+                    <!-- Portugal -->
+                    <a href="https://www.fasttrack36.com/PHPWHDRK/2R3N23N7/?uid=47800" class="flex items-center gap-4 p-5 bg-slate-50 border border-slate-200 rounded-2xl hover:border-brand-blue hover:bg-white hover:shadow-xl transition-all group">
+                        <img src="https://flagcdn.com/w80/pt.png" class="w-12 h-auto rounded shadow-sm">
+                        <div class="text-left">
+                            <span class="block font-black text-brand-navy group-hover:text-brand-blue">Portugal</span>
+                            <span class="text-xs text-green-600 font-bold uppercase tracking-tight" data-i18n="stock_high">Em Stock</span>
+                        </div>
+                    </a>
+
+                    <!-- Itália -->
+                    <a href="https://www.fasttrack36.com/PHPWHDRK/2R3WZHC8/?uid=47806" class="flex items-center gap-4 p-5 bg-slate-50 border border-slate-200 rounded-2xl hover:border-brand-blue hover:bg-white hover:shadow-xl transition-all group">
+                        <img src="https://flagcdn.com/w80/it.png" class="w-12 h-auto rounded shadow-sm">
+                        <div class="text-left">
+                            <span class="block font-black text-brand-navy group-hover:text-brand-blue">Italy</span>
+                            <span class="text-xs text-red-600 font-bold uppercase tracking-tight" data-i18n="stock_low">Scorte Limitate</span>
+                        </div>
+                    </a>
+
+                    <!-- França -->
+                    <a href="https://www.fasttrack36.com/PHPWHDRK/2R3ZCD3T/?uid=47804" class="flex items-center gap-4 p-5 bg-slate-50 border border-slate-200 rounded-2xl hover:border-brand-blue hover:bg-white hover:shadow-xl transition-all group">
+                        <img src="https://flagcdn.com/w80/fr.png" class="w-12 h-auto rounded shadow-sm">
+                        <div class="text-left">
+                            <span class="block font-black text-brand-navy group-hover:text-brand-blue">France</span>
+                            <span class="text-xs text-orange-600 font-bold uppercase tracking-tight" data-i18n="stock_medium">Vente Rapide</span>
                         </div>
                     </a>
 
                     <!-- Reino Unido -->
-                    <a href="https://www.fasttrack37.com/PM7HK3TH/2R4QKHTK/?uid=47822" class="flex items-center gap-4 p-5 bg-slate-50 border border-slate-200 rounded-2xl hover:border-brand-blue hover:bg-white hover:shadow-xl transition-all group">
+                    <a href="https://www.fasttrack36.com/PHPWHDRK/2R4QKHTK/?uid=47822" class="flex items-center gap-4 p-5 bg-slate-50 border border-slate-200 rounded-2xl hover:border-brand-blue hover:bg-white hover:shadow-xl transition-all group">
                         <img src="https://flagcdn.com/w80/gb.png" class="w-12 h-auto rounded shadow-sm">
                         <div class="text-left">
                             <span class="block font-black text-brand-navy group-hover:text-brand-blue">United Kingdom</span>
@@ -293,7 +319,7 @@
                     </a>
 
                     <!-- Benelux (Holanda e Bélgica) -->
-                    <a href="https://www.fasttrack37.com/PM7HK3TH/2R4B3K84/?uid=47812" class="flex items-center gap-4 p-5 bg-slate-50 border border-slate-200 rounded-2xl hover:border-brand-blue hover:bg-white hover:shadow-xl transition-all group">
+                    <a href="https://www.fasttrack36.com/PHPWHDRK/2R4B3K84/?uid=47812" class="flex items-center gap-4 p-5 bg-slate-50 border border-slate-200 rounded-2xl hover:border-brand-blue hover:bg-white hover:shadow-xl transition-all group">
                         <div class="flex flex-col gap-1">
                             <img src="https://flagcdn.com/w80/nl.png" class="w-10 h-auto rounded shadow-sm">
                             <img src="https://flagcdn.com/w80/be.png" class="w-10 h-auto rounded shadow-sm">
@@ -358,7 +384,7 @@
         </div>
         <div class="container mx-auto max-w-3xl px-6 py-20 text-slate-800 content-box">
             <div id="privacy-content" class="hidden-section space-y-6 leading-relaxed">
-                <h1 class="text-4xl font-black mb-10">Privacy Policy</h1>
+                <h1 class="text-4xl font-black mb-10" data-i18n="link_privacy">Privacy Policy</h1>
                 <p>We are committed to protecting your personal data in accordance with the <strong>General Data Protection Regulation (GDPR)</strong>.</p>
                 <h3 class="text-xl font-bold pt-4">Data Collection</h3>
                 <p>We only collect the minimum information required to fulfill your order and provide customer support (Name, Shipping Address, Email).</p>
@@ -367,7 +393,7 @@
             </div>
 
             <div id="terms-content" class="hidden-section space-y-6 leading-relaxed">
-                <h1 class="text-4xl font-black mb-10">Terms of Service</h1>
+                <h1 class="text-4xl font-black mb-10" data-i18n="link_terms">Terms of Service</h1>
                 <h3 class="text-xl font-bold">Eligibility</h3>
                 <p>You must be at least 18 years of age to purchase products from this website.</p>
                 <h3 class="text-xl font-bold">Product Disclaimer</h3>
@@ -375,7 +401,7 @@
             </div>
 
             <div id="refund-content" class="hidden-section space-y-6 leading-relaxed">
-                <h1 class="text-4xl font-black mb-10">Refund Policy</h1>
+                <h1 class="text-4xl font-black mb-10" data-i18n="link_refund">Refund Policy</h1>
                 <h3 class="text-xl font-bold">30-Day Money-Back Guarantee</h3>
                 <p>If you are not completely satisfied with your results, contact support within 30 days of receipt for return instructions. We stand by our formula.</p>
             </div>
@@ -400,10 +426,12 @@
                 stock_medium: "Selling Fast",
                 stock_high: "In Stock",
                 live_chat: "24/7 Live Support",
-                link_privacy: "Privacy",
-                link_terms: "Terms",
-                link_refund: "Refunds",
-                back_home: "BACK"
+                link_privacy: "Privacy Policy",
+                link_terms: "Terms of Service",
+                link_refund: "Refund Policy",
+                back_home: "BACK",
+                popup_bought: "Just purchased 3 bottles!",
+                popup_time: "2 minutes ago"
             },
             sv: {
                 top_bar: "VARNING LÅGT LAGER | SPECIALPRIS IDAG + FRI EU-FRAKT",
@@ -421,16 +449,101 @@
                 stock_medium: "Säljer Snabbt",
                 stock_high: "I Lager",
                 live_chat: "24/7 Kundtjänst",
-                back_home: "TILLBAKA"
+                back_home: "TILLBAKA",
+                popup_bought: "Köpte precis 3 flaskor!",
+                popup_time: "2 minuter sedan"
             },
-            de: {
-                top_bar: "ACHTUNG NIEDRIGER LAGERBESTAND | SONDERPREIS HEUTE + KOSTENLOSER VERSAND",
-                hero_title: "Holen Sie sich Ihre Vitalität zurück",
-                cta_button: "SONDERANGEBOT SICHERN",
-                select_title: "Wählen Sie Ihr Land",
-                stock_low: "Lagerbestand niedrig",
-                live_chat: "24/7 Live-Chat",
-                back_home: "ZURÜCK"
+            es: {
+                top_bar: "ADVERTENCIA DE STOCK BAJO | PRECIO ESPECIAL HOY + ENVÍO GRATIS A LA UE",
+                sub_header_auth: "LA FÓRMULA DE RENDIMIENTO CONFIABLE DE EUROPA",
+                sub_header_ship: "ENVÍO RÁPIDO Y GRATUITO A LA UE",
+                sub_header_guarantee: "GARANTÍA DE 30 DÍAS",
+                hero_badge: "Fórmula Europea Premium",
+                hero_title: "Recupera tu Vitalidad y Rendimiento Máximo",
+                hero_subtitle: "Fórmula diaria avanzada diseñada para la energía natural, la fuerza y el impulso masculino. Confiado por más de 10,000 hombres en Europa.",
+                cta_button: "OBTENER OFERTA ESPECIAL + ENVÍO GRATIS",
+                cta_guarantee: "Prueba TestoLink con una garantía de devolución de dinero de 30 días.",
+                select_title: "Selecciona tu Región",
+                select_subtitle: "Accede a precios locales, moneda y las rutas de envío más rápidas a tu puerta.",
+                stock_low: "Alerta de Stock Bajo",
+                stock_medium: "Vendiéndose Rápido",
+                stock_high: "En Stock",
+                live_chat: "Soporte en Vivo 24/7",
+                link_privacy: "Política de Privacidad",
+                link_terms: "Términos de Servicio",
+                link_refund: "Política de Reembolso",
+                back_home: "VOLVER",
+                popup_bought: "¡Acaba de comprar 3 botellas!",
+                popup_time: "hace 2 minutos"
+            },
+            pt: {
+                top_bar: "AVISO DE STOCK BAIXO | PREÇO ESPECIAL HOJE + ENVIO GRÁTIS PARA A UE",
+                sub_header_auth: "A FÓRMULA DE PERFORMANCE CONFIADA DA EUROPA",
+                sub_header_ship: "ENVIO RÁPIDO E GRÁTIS PARA A UE",
+                sub_header_guarantee: "GARANTIA DE 30 DIAS",
+                hero_badge: "Fórmula Europeia Premium",
+                hero_title: "Recupere a sua Vitalidade e Performance Máxima",
+                hero_subtitle: "Fórmula diária avançada concebida para energia natural, força e impulso masculino. Confiado por mais de 10.000 homens em toda a Europa.",
+                cta_button: "OBTER OFERTA ESPECIAL + ENVIO GRÁTIS",
+                cta_guarantee: "Experimente o TestoLink com uma garantia de reembolso de 30 dias.",
+                select_title: "Selecione a sua Região",
+                select_subtitle: "Aceda a preços locais, moeda e às rotas de envio mais rápidas até à sua porta.",
+                stock_low: "Alerta de Stock Baixo",
+                stock_medium: "Vendendo Rápido",
+                stock_high: "Em Stock",
+                live_chat: "Suporte ao Vivo 24/7",
+                link_privacy: "Política de Privacidade",
+                link_terms: "Termos de Serviço",
+                link_refund: "Política de Reembolso",
+                back_home: "VOLTAR",
+                popup_bought: "Acabou de comprar 3 frascos!",
+                popup_time: "há 2 minutos"
+            },
+            it: {
+                top_bar: "AVVISO SCORTE LIMITATE | PREZZO SPECIALE OGGI + SPEDIZIONE UE GRATUITA",
+                sub_header_auth: "LA FORMULA PER LE PRESTAZIONI PIÙ AFFIDABILE D'EUROPA",
+                sub_header_ship: "SPEDIZIONE UE VELOCE E GRATUITA",
+                sub_header_guarantee: "GARANZIA DI 30 GIORNI",
+                hero_badge: "Formula Europea Premium",
+                hero_title: "Ritrova la tua Vitalità e le massime Prestazioni",
+                hero_subtitle: "Formula quotidiana avanzata progettata per l'energia naturale, la forza e la spinta maschile. Scelto da oltre 10.000 uomini in Europa.",
+                cta_button: "OTTIENI L'OFFERTA SPECIALE + SPEDIZIONE GRATUITA",
+                cta_guarantee: "Prova TestoLink con una garanzia di rimborso di 30 giorni.",
+                select_title: "Seleziona la tua Regione",
+                select_subtitle: "Accedi ai prezzi locali, alla valuta e alle rotte di spedizione più veloci a casa tua.",
+                stock_low: "Avviso Scorte Limitate",
+                stock_medium: "Vendite Rapide",
+                stock_high: "Disponibile",
+                live_chat: "Supporto Live 24/7",
+                link_privacy: "Informativa sulla Privacy",
+                link_terms: "Termini di Servizio",
+                link_refund: "Politica di Rimborso",
+                back_home: "INDIETRO",
+                popup_bought: "Ha appena acquistato 3 flaconi!",
+                popup_time: "2 minuti fa"
+            },
+            fr: {
+                top_bar: "ALERTE STOCK FAIBLE | PRIX SPÉCIAL AUJOURD'HUI + LIVRAISON UE GRATUITE",
+                sub_header_auth: "LA FORMULE DE PERFORMANCE LA PLUS FIABLE D'EUROPE",
+                sub_header_ship: "LIVRAISON UE RAPIDE ET GRATUITE",
+                sub_header_guarantee: "GARANTIE DE 30 JOURS",
+                hero_badge: "Formule Européenne Premium",
+                hero_title: "Retrouvez votre Vitalité et vos Performances",
+                hero_subtitle: "Formule quotidienne avancée conçue pour l'énergie naturelle, la force et la virilité. Approuvé par plus de 10 000 hommes en Europe.",
+                cta_button: "PROFITEZ DE L'OFFRE SPÉCIALE + LIVRAISON GRATUITE",
+                cta_guarantee: "Essayez TestoLink avec une garantie satisfait ou remboursé de 30 jours.",
+                select_title: "Sélectionnez votre Région",
+                select_subtitle: "Accédez aux tarifs locaux, à la devise et aux itinéraires d'expédition les plus rapides.",
+                stock_low: "Alerte Stock Faible",
+                stock_medium: "Vente Rapide",
+                stock_high: "En Stock",
+                live_chat: "Support en Direct 24/7",
+                link_privacy: "Politique de Confidentialité",
+                link_terms: "Conditions d'Utilisation",
+                link_refund: "Politique de Reemboursement",
+                back_home: "RETOUR",
+                popup_bought: "Vient d'acheter 3 flacons !",
+                popup_time: "il y a 2 minutes"
             }
         };
 
@@ -457,8 +570,8 @@
 
         // Sistema de Prova Social
         function showRandomPurchase() {
-            const names = ["Lars", "Erik", "Soren", "Hans", "Johan", "Markus", "David"];
-            const cities = ["Stockholm", "Copenhagen", "Berlin", "London", "Amsterdam", "Helsinki"];
+            const names = ["Lars", "Erik", "Soren", "Hans", "Johan", "Markus", "David", "Carlos", "Antonio", "Marco", "Jean"];
+            const cities = ["Stockholm", "Copenhagen", "Berlin", "London", "Amsterdam", "Helsinki", "Dublin", "Madrid", "Lisbon", "Rome", "Paris"];
             const popup = document.getElementById('purchase-popup');
             
             setInterval(() => {
@@ -491,13 +604,13 @@
         }
 
         function openChat() {
-            showModal("Suporte ao Vivo", "Nossos agentes estão ocupados no momento. O tempo estimado de espera é de 2 minutos. Por favor, permaneça na página.");
+            showModal("Support", "Our agents are currently busy. Estimated wait time is 2 minutes. Please stay on the page.");
         }
 
         window.onload = () => {
             const urlParams = new URLSearchParams(window.location.search);
             const lang = urlParams.get('lang') || navigator.language.split('-')[0];
-            const countryMap = { sv:'se', de:'de', da:'dk', fi:'fi', nl:'nl', en:'gb' };
+            const countryMap = { sv:'se', de:'de', da:'dk', fi:'fi', nl:'nl', en:'gb', es:'es', pt:'pt', it:'it', fr:'fr', ie:'ie' };
             setLanguage(lang, countryMap[lang] || 'gb');
             showRandomPurchase();
         };
